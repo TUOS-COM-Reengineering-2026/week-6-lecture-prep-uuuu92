@@ -1,11 +1,41 @@
 import unittest
 from prep import strange_function
 
+
 class MyTestCase(unittest.TestCase):
+
     def test_strange_function1(self):
         self.assertEqual(
             first=strange_function(1, 2, 3, 4),
             second='behaviour 3'
         )
 
-    # TODO: Can you write more test cases below to increase the test coverage of `strange_function`?
+    def test_strange_function2(self):
+        self.assertEqual(
+            strange_function(2, 2, 1, 3),
+            'behaviour 1'
+        )
+
+    def test_strange_function3(self):
+        self.assertEqual(
+            strange_function(2, 2, 5, 3),
+            'behaviour 2'
+        )
+
+    def test_strange_function4(self):
+        self.assertEqual(
+            strange_function(5, 3, 2, 1),
+            'behaviour 4'
+        )
+
+    def test_strange_function5(self):
+        self.assertEqual(
+            strange_function(5, 3, 2, 4),
+            'behaviour 5'
+        )
+
+    def test_strange_function6(self):
+        self.assertEqual(
+            strange_function(3, 2, 3, 4),
+            'behaviour 6'
+        )
